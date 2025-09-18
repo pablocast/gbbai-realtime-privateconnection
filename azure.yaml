@@ -1,0 +1,21 @@
+name: ai-foundry-realtime
+metadata:
+  template: ai-foundry-realtime@0.0.1-beta
+infra:
+  provider: bicep
+  path: infra
+hooks:
+  postdeploy:
+    posix:
+      shell: sh
+      run: |
+        echo "Deployment complete"
+        echo "Setting up environment variables..."
+        chmod +x ./infra/scripts/set-env.sh
+        ./infra/scripts/set-env.sh
+    windows:
+      shell: pwsh
+      run: |
+        Write-Host "Deployment complete"
+        Write-Host "Setting up environment variables..."
+        .\infra\scripts\set-env.ps1
