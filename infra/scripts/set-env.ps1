@@ -23,6 +23,9 @@ $envContent = @"
 # ---- AOAI/LLM/Embedding Model Variables ----
 APIM_RESOURCE_GATEWAY_URL=$(Get-AzdValue $azdEnvValues "apimResourceGatewayURL")
 API_KEY=$(Get-AzdValue $azdEnvValues "apiKey")
+AZURE_OPENAI_DEPLOYMENT_NAME=$(Get-AzdValue $azdEnvValues "azureOpenAiDeploymentName")
+AZURE_OPENAI_API_VERSION=$(Get-AzdValue $azdEnvValues "azureOpenAiApiVersion")
+
 "@
 
 # Write .env file

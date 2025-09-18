@@ -27,4 +27,4 @@ param apimSubscriptionsConfig = [
 ]
 
 param principalId = readEnvironmentVariable('AZURE_PRINCIPAL_ID', 'principalId')
-
+param azureOpenAiApiVersion = '2024-10-01-preview'

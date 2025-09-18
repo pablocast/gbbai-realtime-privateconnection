@@ -40,3 +40,8 @@ black[jupyter]
 # Evaluate
 scikit-learn
 
+# Realtime
+aiohttp
+openai
+openai[realtime]
+fastrtc[vad]

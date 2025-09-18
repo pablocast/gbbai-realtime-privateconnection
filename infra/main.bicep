@@ -10,7 +10,7 @@ param inferenceAPIPath string = 'inference' // Path to the inference API in the 
 param inferenceAPIType string = 'websocket'
 param foundryProjectName string = 'demo-realtime'
 param principalId string
-
+param azureOpenAiApiVersion string 
 // ------------------
 //    VARIABLES
 // ------------------
@@ -164,3 +164,5 @@ output apimServiceId string = apimModule.outputs.id
 output apimResourceGatewayURL string = apimModule.outputs.gatewayUrl
 output apiKey string = apimModule.outputs.apimSubscriptions[0].key
 output apimSubscriptions array = apimModule.outputs.apimSubscriptions
+output azureOpenAiDeploymentName string = modelsConfig[0].name
+output azureOpenAiApiVersion string = azureOpenAiApiVersion

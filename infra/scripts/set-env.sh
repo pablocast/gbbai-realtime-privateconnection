@@ -13,6 +13,8 @@ cat > .env << EOF
 # ---- AOAI/LLM/Embedding Model Variables ----
 APIM_RESOURCE_GATEWAY_URL=$(azd env get-values | grep APIM_RESOURCE_GATEWAY_URL | cut -d'=' -f2 | tr -d '"')
 API_KEY=$(azd env get-values | grep API_KEY | cut -d'=' -f2 | tr -d '"')
+AZURE_OPENAI_DEPLOYMENT_NAME=$(azd env get-values | grep azureOpenAiDeploymentName | cut -d'=' -f2 | tr -d '"')
+AZURE_OPENAI_API_VERSION=$(azd env get-values | grep azureOpenAiApiVersion | cut -d'=' -f2 | tr -d '"')
 EOF
 
 echo ".env file created successfully with deployment outputs!"
